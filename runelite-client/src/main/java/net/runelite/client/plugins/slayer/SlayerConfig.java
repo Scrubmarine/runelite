@@ -136,8 +136,20 @@ public interface SlayerConfig extends Config
 		return Color.RED;
 	}
 
+	@Alpha
 	@ConfigItem(
-		position = 9,
+			position = 9,
+			keyName = "superiorColor",
+			name = "Superior color",
+			description = "Color of the highlighted superior targets"
+	)
+	default Color getSuperiorColor()
+	{
+		return Color.RED;
+	}
+
+	@ConfigItem(
+		position = 10,
 		keyName = "weaknessPrompt",
 		name = "Show monster weakness",
 		description = "Show an overlay on a monster when it is weak enough to finish off (Only Lizards, Gargoyles, Rockslugs & Zygomites)"
@@ -148,7 +160,7 @@ public interface SlayerConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 10,
+		position = 11,
 		keyName = "taskCommand",
 		name = "Task command",
 		description = "Configures whether the slayer task command is enabled<br> !task"
